@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 2</title>
+   
+</head>
+<body>
+    <p class="para">
+        Q.1):  What is box-sizing?
+    </p>
+    <p class="para1">
+        <b style="color:black">Ans:</b>
+             Box-sizing property defines how the width and height gets applied on an element. <br>
+            Default value of box-sizing is content-box, in this case the actual width of the box will be equal to the border and padding and width of the box ( Actual width : width + border + padding ). <br>
+            In case when box-sizing is set to be border-box, then the actual width will be equal to the width of the box itself. Means if we will increase the padding or border of the box then it will not increase the width of the box.  <br> <br>    
+            a)    content-box (Default) <br>
+            b)    border-box 
+    </p>
+    <pre class="para2">
+        HTML:-
+            <div class="content-box">Content box</div>
+            br>
+            <div class="border-box">Border box<div>
+        CSS:-
+            div {
+                width: 160px;
+                height: 80px;
+                padding: 20px;
+                border: 8px solid rgb(47, 0, 255);
+                background: rgb(240, 240, 95);
+              }
+          
+              .content-box{
+                  box-sizing: content-box;
+              }
+          
+              .border-box {
+                box-sizing: border-box;
+              }     
+    </pre>
+    <p class="para1">
+        Output:-
+    </p>
+   
+    <p class="para">
+        Q.2):What is animation-delay?
+    </p>
+    <p class="para1">
+        <b style="color:black">Ans:</b>
+        It is a sub-property of CSS animation. It defines how long the animation has to wait before <b>starting</b>. Using the animation-delay property, you define the delay by specifying the number of seconds or milliseconds it should take before playing.
+    </p>
+    <pre class="para2">
+        HTML:-
+            div> /div>
+            
+        CSS:-
+            div {
+                width: 100px;
+                height: 100px;
+                background: red;
+                position: relative;
+                animation: moving 5s infinite;
+                animation-delay: 3s;
+              }
+          
+              @keyframes moving {
+                from {left: 0px;}
+                to {left: 200px;}
+              }
+    </pre>
+  
+        Q.3): Which property will you use to merge cells vertically in a grid?
+    </p>
+    <p class="para1">
+        <b style="color:black">Ans:</b>
+        grid-column-start and grid-column-end property can be used to merge cells vertically. It also has a shorthand i.e., grid-column: start/end. If you want to merge two elements in row then we will have to use grid-row property inside the child element. Remember these properties are applicable only to child elements not to parent elements.
+    </p>
+    <pre class="para2">
+        HTML:-
+            div class="grid-container">
+                    div class="item item1">1/div>
+                    div class="item">2/div>
+                    div class="item">3/div>  
+                    div class="item">4/div>
+                    div class="item">5/div>
+                    div class="item">6/div>
+            /div>
+ 
+        CSS:-
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-gap: 15px;
+                background-color: #2196F3;
+                padding: 20px;
+                text-align: center;
+              }
+          
+            .item{
+                background-color: aliceblue;
+                border: #2196F3;
+                border-radius: 20px;
+            }
+
+            .item1{
+                grid-column: 1/3;
+            }
+    </pre>
+   
+   
+    <p class="para">
+        Q.4):Which property you will use to merge cells horizontally in grid?
+    </p>
+    <p class="para1">
+        <b style="color:black">Ans:</b>
+        grid-row-start and grid-row-end property can be used to merge cells horizontally. It also has a shorthand i.e., grid-row: grid-row-start/grid-row-end;
+    </p>
+    <pre class="para2">
+            HTML:-
+                div class="grid-container">
+                        div class="item item1">1/div>
+                        div class="item">2/div>
+                        div class="item">3/div>  
+                        div class="item">4/div>
+                        div class="item">5/div>
+                        div class="item">6/div>
+                /div>
+
+            CSS:-
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    grid-gap: 15px;
+                    background-color: #2196F3;
+                    padding: 20px;
+                    text-align: center;
+                  }
+              
+                .item{
+                    background-color: aliceblue;
+                    border: #2196F3;
+                    border-radius: 20px;
+                }
+
+                .item1{
+                    grid-row: 1/4;
+                }
+    </pre>
+    <p class="para1">
+        Output:-
+    </p>
+   
+    <p class="para">
+        Q.5): What is a Box-model?
+    </p>
+    <p class="para1">
+        <b style="color:black">Ans:</b>
+        The box model in CSS is a set of rules that determine how your web page is rendered on the internet. In this model, a rectangular box is generated for HTML elements. This box consists of first content, then padding, then border, and finally margin.
+    </p>
+    
+  
+    <p class="para">
+        Q.6):. What is the difference between display none and visibility hidden?
+    </p>
+    <p class="para"><b>Ans:</b></p>
+    <table>
+        <tr>
+            <th>display: none;</th>
+            <th>visibility: hidden;</th>
+        </tr>
+        <tr>
+            <td>
+                The display: none property is used to hide elements without deleting them. It does not take up any space.
+            </td>
+            <td>
+                The visibility: hidden property also hides an element, but affects the layout i.e., it takes up the space.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                In this case, the tag is removed from the page, which allows other elements to fill in.
+            </td>
+            <td>
+                The element is hidden from view but not the page flow. 
+            </td>
+        </tr>
+    </table> <br> <br>
+  
+</body>
+</html>
